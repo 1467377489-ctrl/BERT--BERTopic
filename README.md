@@ -54,7 +54,8 @@ BERT-BERTOPIC/
 ├── results/                          # 存放所有分析结果和图表
 │   ├── advanced_analysis/            # 存放进阶分析脚本的产出
 │   └── topic_modeling/               # 存放主题建模的结果和模型
-├── stopword/                         # 停用词词典
+├── hit-stopword.txt                  # 哈工大停用词词典
+├── general_evaluation_stopwords.txt  # 自定义补充停用词词典                    
 ├── visualize-sentiment_analysis/     # (旧文件夹，功能已被adv脚本替代)
 │
 ├── step0_finetune_model.py           # 步骤0: 微调情感回归模型
@@ -65,6 +66,8 @@ BERT-BERTOPIC/
 ├── step4_BERTopic.py                 # 步骤4: 训练并保存BERTopic模型
 ├── step5-visualize_top_topics.py     # 步骤5: 可视化主题建模结果
 │
+├── process_data_analysis.py          #数据预处理及清洗：专为情感分析
+├── process_data_topic.py             #数据预处理与清洗：专为主题建模
 ├── run_adv_1_aspect_distribution.py  # 进阶分析1: 方面分布对比
 ├── run_adv_2_sentiment_profile.py    # 进阶分析2: 情感剖面密度图
 ├── run_adv_3_sub_topic_modeling.py   # 进阶分析3: 对特定方面进行二次主题挖掘
@@ -211,7 +214,6 @@ python run_adv_4_probe_extreme_comments.py
 
 ## 6. 分析结果展示（示例）
 
-*（在这里附上你的项目结果图表会极大地提升README的表现力）*
 
 ### 6.1 跨平台方面情感对比
 
@@ -232,4 +234,5 @@ python run_adv_4_probe_extreme_comments.py
 - **模型优化**: 尝试更大规模的预训练模型进行微调，或者探索多任务学习，同时进行情感回归和方面分类。
 - **方面提取自动化**: 使用模型（如Span-based Extraction）替代当前的关键词匹配方法，以自动发现新的讨论方面。
 - **动态演化分析**: 引入时间戳数据，使用动态BERTopic分析公众讨论热点和情感态度随时间的变化趋势。
+
 - **构建交互式仪表盘**: 使用Streamlit或Dash将分析结果封装成一个交互式的Web应用，方便非技术人员探索数据。

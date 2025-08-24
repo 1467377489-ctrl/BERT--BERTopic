@@ -1,0 +1,25 @@
+# 字节码和缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境
+venv/
+.venv/
+
+# IDE 和编辑器配置文件
+.vscode/
+.idea/
+.project
+.classpath
+
+# 数据、模型和结果 (非常重要！)
+# 这些文件通常很大，不应该被Git追踪
+# 别人应该通过运行你的脚本来生成它们
+data/
+models/
+results/
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db

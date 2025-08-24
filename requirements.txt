@@ -1,0 +1,34 @@
+# ----------------------------------------------------
+#  非遗醒狮文化舆情分析项目 - Python 依赖库
+# ----------------------------------------------------
+#
+# 使用以下命令安装所有依赖:
+# pip install -r requirements.txt
+#
+# 注意: PyTorch (torch) 的安装可能需要根据你的
+#      CUDA 版本进行特殊配置。建议访问 PyTorch 官网
+#      (https://pytorch.org/get-started/locally/)
+#      获取最适合你环境的安装命令。
+# ----------------------------------------------------
+
+# --- 核心NLP与深度学习框架 ---
+torch
+transformers
+sentence-transformers
+tqdm  # 优美的进度条，用于监控训练和预测过程
+
+# --- 主题建模核心库 ---
+bertopic
+umap-learn  # BERTopic 用于降维的核心依赖
+
+# --- 数据处理与科学计算 ---
+pandas
+numpy
+scikit-learn
+scipy  # 用于统计检验 (Mann-Whitney U test)
+openpyxl  # 让pandas能够读写 .xlsx 文件
+
+# --- 数据可视化 ---
+matplotlib
+seaborn
+adjustText  # 用于在图表中自动调整文本标签，防止重叠
